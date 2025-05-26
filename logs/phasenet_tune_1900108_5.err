@@ -1,0 +1,19 @@
+2025-05-26 00:21:59,101 - INFO - Running evaluation with arguments: Namespace(model_path='tuning_runs/phasenet_Iquique/lr1e-4_s30_e40/phasenet_best_lr1e-4_s30_e40.pth', dataset_name='Iquique', force_download_data=False, context_window_samples_before=3000, context_window_length=6000, model_input_samples=3001, sigma=30.0, batch_size=256, detection_threshold=0.3, skip_noise_metrics=False, num_workers=4, output_dir='tuning_runs/phasenet_Iquique/lr1e-4_s30_e40/evaluation', num_plot_examples=3)
+2025-05-26 00:21:59,826 - INFO - Successfully loaded model from: tuning_runs/phasenet_Iquique/lr1e-4_s30_e40/phasenet_best_lr1e-4_s30_e40.pth
+2025-05-26 00:21:59,827 - INFO - Loading TEST set for dataset: Iquique
+2025-05-26 00:21:59,827 | seisbench | WARNING | Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-26 00:21:59,827 - WARNING - Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-26 00:21:59,877 | seisbench | WARNING | Output component order not specified, defaulting to 'ZNE'.
+2025-05-26 00:21:59,877 - WARNING - Output component order not specified, defaulting to 'ZNE'.
+2025-05-26 00:21:59,896 - INFO - Test set size (using default split): 4020
+2025-05-26 00:21:59,896 - INFO - Running evaluation on the test set...
+Evaluating Test Set:   0%|          | 0/16 [00:00<?, ?it/s]2025-05-26 00:22:02,493 - INFO - First evaluation batch X shape: torch.Size([256, 3, 3001]) (dtype: torch.float32), y shape: torch.Size([256, 3, 3001]) (dtype: torch.float32)
+Evaluating Test Set:   6%|▋         | 1/16 [00:02<00:43,  2.91s/it]Evaluating Test Set:  12%|█▎        | 2/16 [00:03<00:19,  1.36s/it]Evaluating Test Set:  19%|█▉        | 3/16 [00:03<00:10,  1.18it/s]Evaluating Test Set:  25%|██▌       | 4/16 [00:03<00:07,  1.65it/s]Evaluating Test Set:  31%|███▏      | 5/16 [00:05<00:11,  1.07s/it]Evaluating Test Set:  38%|███▊      | 6/16 [00:05<00:07,  1.26it/s]Evaluating Test Set:  44%|████▍     | 7/16 [00:06<00:05,  1.65it/s]Evaluating Test Set:  50%|█████     | 8/16 [00:06<00:03,  2.06it/s]Evaluating Test Set:  56%|█████▋    | 9/16 [00:08<00:06,  1.08it/s]Evaluating Test Set:  62%|██████▎   | 10/16 [00:08<00:04,  1.39it/s]Evaluating Test Set:  69%|██████▉   | 11/16 [00:08<00:02,  1.73it/s]Evaluating Test Set:  75%|███████▌  | 12/16 [00:08<00:01,  2.07it/s]Evaluating Test Set:  81%|████████▏ | 13/16 [00:10<00:02,  1.31it/s]Evaluating Test Set:  88%|████████▊ | 14/16 [00:10<00:01,  1.72it/s]Evaluating Test Set:  94%|█████████▍| 15/16 [00:10<00:00,  2.18it/s]Evaluating Test Set: 100%|██████████| 16/16 [00:10<00:00,  2.85it/s]Evaluating Test Set: 100%|██████████| 16/16 [00:10<00:00,  1.48it/s]
+2025-05-26 00:22:10,802 - INFO - 
+--- Evaluation Metrics --- 
+  Phase  Precision    Recall  F1-Score    PR_AUC  Threshold_for_PRF1
+0     P   0.885676  0.982836  0.931730  0.991371                 0.3
+1     S   0.974467  0.977861  0.976161  0.991559                 0.3
+2     N   0.970900  0.979353  0.975108  0.991482                 0.3
+2025-05-26 00:22:10,804 - INFO - Saved metrics to tuning_runs/phasenet_Iquique/lr1e-4_s30_e40/evaluation/phasenet_best_lr1e-4_s30_e40_Iquique_metrics_thresh0.3.csv
+2025-05-26 00:22:11,201 - INFO - Saved PR curves to tuning_runs/phasenet_Iquique/lr1e-4_s30_e40/evaluation/phasenet_best_lr1e-4_s30_e40_Iquique_PR_curves.png

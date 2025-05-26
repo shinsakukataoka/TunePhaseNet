@@ -1,0 +1,26 @@
+2025-05-25 22:21:12,782 - INFO - Running training with arguments: Namespace(dataset_name='Iquique', force_download_data=False, context_window_samples_before=3000, context_window_length=6000, model_input_samples=3001, learning_rate=0.0005, epochs=40, batch_size=128, sigma=20.0, use_pretrained_weights=False, pretrained_model_name='stead', add_gaussian_noise=False, gaussian_noise_std=0.05, add_signal_shift=False, signal_shift_max=200, add_gain=False, num_workers=4, log_interval=20, output_dir='tuning_runs/phasenet_Iquique/lr5e-4_s20_e40', model_filename='phasenet_best_lr5e-4_s20_e40.pth', save_latest_model_epoch=False)
+2025-05-25 22:21:12,783 - INFO - Initializing a new PhaseNet model from scratch.
+2025-05-25 22:21:14,730 - INFO - Model moved to cuda.
+2025-05-25 22:21:14,730 - INFO - Loading dataset: Iquique
+2025-05-25 22:21:14,730 | seisbench | WARNING | Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-25 22:21:14,730 - WARNING - Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-25 22:21:14,780 | seisbench | WARNING | Output component order not specified, defaulting to 'ZNE'.
+2025-05-25 22:21:14,780 - WARNING - Output component order not specified, defaulting to 'ZNE'.
+2025-05-25 22:21:14,799 - INFO - Dataset split (using default): Train=8040, Dev=1340
+2025-05-25 22:21:15,992 - INFO - Will save best model to: tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 22:21:15,992 - INFO - Epoch 1/40
+2025-05-25 22:21:22,638 - INFO - First training batch X shape: torch.Size([128, 3, 3001]) (dtype: torch.float32), y shape: torch.Size([128, 3, 3001]) (dtype: torch.float32)
+Traceback (most recent call last):
+  File "/home/skataoka26/ann_final/gpt_cnn.py", line 272, in <module>
+    main(args)
+  File "/home/skataoka26/ann_final/gpt_cnn.py", line 195, in main
+    loss = criterion(pred_for_loss, y_batch) # Now shapes match
+  File "/home/skataoka26/ann_final/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/skataoka26/ann_final/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/skataoka26/ann_final/venv/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 699, in forward
+    return F.binary_cross_entropy(
+  File "/home/skataoka26/ann_final/venv/lib/python3.9/site-packages/torch/nn/functional.py", line 3560, in binary_cross_entropy
+    raise ValueError(
+ValueError: Using a target size (torch.Size([128, 3, 3001])) that is different to the input size (torch.Size([128, 3001, 3])) is deprecated. Please ensure they have the same size.

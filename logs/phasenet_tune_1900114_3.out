@@ -1,0 +1,34 @@
+SLURM_JOB_ID: 1900118
+SLURM_ARRAY_JOB_ID: 1900114
+SLURM_ARRAY_TASK_ID: 3
+Host: dgx001
+CUDA_VISIBLE_DEVICES: 0
+Mon May 26 00:27:18 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:4E:00.0 Off |                    0 |
+| N/A   34C    P0             65W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Virtual environment activated.
+Current directory: /home/skataoka26/ann_final
+--- Run 3: LR=1e-3, σ=30 ---
+Model path: tuning_runs/phasenet_Iquique/lr1e-3_s30_e40/phasenet_best_lr1e-3_s30_e40.pth
+Model already trained; skipping training.
+--- Starting Evaluation ---
+python evaluate.py     --model_path tuning_runs/phasenet_Iquique/lr1e-3_s30_e40/phasenet_best_lr1e-3_s30_e40.pth     --dataset_name Iquique     --sigma 30     --batch_size 256     --num_workers 4     --detection_threshold 0.3     --output_dir tuning_runs/phasenet_Iquique/lr1e-3_s30_e40/evaluation     --num_plot_examples 3
+Evaluation completed.
+--- Task 3 done ---

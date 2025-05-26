@@ -1,0 +1,307 @@
+2025-05-25 12:28:22,656 - INFO - Running training with arguments: Namespace(dataset_name='Iquique', force_download_data=False, context_window_samples_before=3000, context_window_length=6000, model_input_samples=3001, learning_rate=0.0005, epochs=40, batch_size=128, sigma=20.0, use_pretrained_weights=False, pretrained_model_name='stead', add_gaussian_noise=False, gaussian_noise_std=0.05, add_signal_shift=False, signal_shift_max=200, add_gain=False, num_workers=4, log_interval=20, output_dir='tuning_runs/phasenet_Iquique/lr5e-4_s20_e40', model_filename='phasenet_best_lr5e-4_s20_e40.pth', save_latest_model_epoch=False)
+2025-05-25 12:28:22,656 - INFO - Initializing a new PhaseNet model from scratch.
+2025-05-25 12:28:27,143 - INFO - Model moved to cuda.
+2025-05-25 12:28:27,143 - INFO - Loading dataset: Iquique
+2025-05-25 12:28:27,143 | seisbench | WARNING | Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-25 12:28:27,143 - WARNING - Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-25 12:28:27,193 | seisbench | WARNING | Output component order not specified, defaulting to 'ZNE'.
+2025-05-25 12:28:27,193 - WARNING - Output component order not specified, defaulting to 'ZNE'.
+2025-05-25 12:28:27,212 - INFO - Dataset split (using default): Train=8040, Dev=1340
+2025-05-25 12:28:28,380 - INFO - Will save best model to: tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:28:28,380 - INFO - Epoch 1/40
+2025-05-25 12:28:32,343 - INFO - First training batch X shape: torch.Size([128, 3, 3001]) (dtype: torch.float32), y shape: torch.Size([128, 3, 3001]) (dtype: torch.float32)
+2025-05-25 12:28:43,394 - INFO -   Batch 20/62: Avg Batch Loss: 0.634134  [  2560/  8040]
+2025-05-25 12:28:48,852 - INFO -   Batch 40/62: Avg Batch Loss: 0.574111  [  5120/  8040]
+2025-05-25 12:28:52,559 - INFO -   Batch 60/62: Avg Batch Loss: 0.551272  [  7680/  8040]
+2025-05-25 12:28:53,096 - INFO - Epoch 1 - Average Training Loss: 0.614152
+2025-05-25 12:28:56,855 - INFO - First validation batch X shape: torch.Size([128, 3, 3001]) (dtype: torch.float32), y shape: torch.Size([128, 3, 3001]) (dtype: torch.float32)
+2025-05-25 12:29:05,311 - INFO - Epoch 1 - Average Validation Loss: 0.549903
+2025-05-25 12:29:05,311 - INFO - New best validation loss: 0.549903. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:29:05,385 - INFO - Epoch 2/40
+2025-05-25 12:29:08,821 - INFO -   Batch 20/62: Avg Batch Loss: 0.532647  [  2560/  8040]
+2025-05-25 12:29:12,417 - INFO -   Batch 40/62: Avg Batch Loss: 0.519610  [  5120/  8040]
+2025-05-25 12:29:15,919 - INFO -   Batch 60/62: Avg Batch Loss: 0.505855  [  7680/  8040]
+2025-05-25 12:29:16,421 - INFO - Epoch 2 - Average Training Loss: 0.525419
+2025-05-25 12:29:18,392 - INFO - Epoch 2 - Average Validation Loss: 0.505222
+2025-05-25 12:29:18,392 - INFO - New best validation loss: 0.505222. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:29:18,403 - INFO - Epoch 3/40
+2025-05-25 12:29:21,884 - INFO -   Batch 20/62: Avg Batch Loss: 0.490887  [  2560/  8040]
+2025-05-25 12:29:25,428 - INFO -   Batch 40/62: Avg Batch Loss: 0.477539  [  5120/  8040]
+2025-05-25 12:29:28,805 - INFO -   Batch 60/62: Avg Batch Loss: 0.463583  [  7680/  8040]
+2025-05-25 12:29:29,261 - INFO - Epoch 3 - Average Training Loss: 0.483286
+2025-05-25 12:29:31,001 - INFO - Epoch 3 - Average Validation Loss: 0.462542
+2025-05-25 12:29:31,001 - INFO - New best validation loss: 0.462542. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:29:31,012 - INFO - Epoch 4/40
+2025-05-25 12:29:34,519 - INFO -   Batch 20/62: Avg Batch Loss: 0.448458  [  2560/  8040]
+2025-05-25 12:29:37,969 - INFO -   Batch 40/62: Avg Batch Loss: 0.433714  [  5120/  8040]
+2025-05-25 12:29:41,347 - INFO -   Batch 60/62: Avg Batch Loss: 0.416228  [  7680/  8040]
+2025-05-25 12:29:41,828 - INFO - Epoch 4 - Average Training Loss: 0.439599
+2025-05-25 12:29:43,643 - INFO - Epoch 4 - Average Validation Loss: 0.414375
+2025-05-25 12:29:43,644 - INFO - New best validation loss: 0.414375. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:29:43,655 - INFO - Epoch 5/40
+2025-05-25 12:29:47,103 - INFO -   Batch 20/62: Avg Batch Loss: 0.396614  [  2560/  8040]
+2025-05-25 12:29:50,424 - INFO -   Batch 40/62: Avg Batch Loss: 0.380830  [  5120/  8040]
+2025-05-25 12:29:53,909 - INFO -   Batch 60/62: Avg Batch Loss: 0.365984  [  7680/  8040]
+2025-05-25 12:29:54,404 - INFO - Epoch 5 - Average Training Loss: 0.388321
+2025-05-25 12:29:56,177 - INFO - Epoch 5 - Average Validation Loss: 0.367466
+2025-05-25 12:29:56,177 - INFO - New best validation loss: 0.367466. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:29:56,188 - INFO - Epoch 6/40
+2025-05-25 12:29:59,756 - INFO -   Batch 20/62: Avg Batch Loss: 0.350946  [  2560/  8040]
+2025-05-25 12:30:03,161 - INFO -   Batch 40/62: Avg Batch Loss: 0.337597  [  5120/  8040]
+2025-05-25 12:30:06,626 - INFO -   Batch 60/62: Avg Batch Loss: 0.323939  [  7680/  8040]
+2025-05-25 12:30:07,139 - INFO - Epoch 6 - Average Training Loss: 0.343217
+2025-05-25 12:30:08,936 - INFO - Epoch 6 - Average Validation Loss: 0.332214
+2025-05-25 12:30:08,936 - INFO - New best validation loss: 0.332214. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:30:08,947 - INFO - Epoch 7/40
+2025-05-25 12:30:12,323 - INFO -   Batch 20/62: Avg Batch Loss: 0.309735  [  2560/  8040]
+2025-05-25 12:30:15,859 - INFO -   Batch 40/62: Avg Batch Loss: 0.298101  [  5120/  8040]
+2025-05-25 12:30:19,281 - INFO -   Batch 60/62: Avg Batch Loss: 0.285636  [  7680/  8040]
+2025-05-25 12:30:19,784 - INFO - Epoch 7 - Average Training Loss: 0.303410
+2025-05-25 12:30:21,608 - INFO - Epoch 7 - Average Validation Loss: 0.289155
+2025-05-25 12:30:21,608 - INFO - New best validation loss: 0.289155. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:30:21,619 - INFO - Epoch 8/40
+2025-05-25 12:30:25,159 - INFO -   Batch 20/62: Avg Batch Loss: 0.273922  [  2560/  8040]
+2025-05-25 12:30:28,732 - INFO -   Batch 40/62: Avg Batch Loss: 0.262282  [  5120/  8040]
+2025-05-25 12:30:32,091 - INFO -   Batch 60/62: Avg Batch Loss: 0.253428  [  7680/  8040]
+2025-05-25 12:30:32,558 - INFO - Epoch 8 - Average Training Loss: 0.267412
+2025-05-25 12:30:34,363 - INFO - Epoch 8 - Average Validation Loss: 0.264672
+2025-05-25 12:30:34,363 - INFO - New best validation loss: 0.264672. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:30:34,374 - INFO - Epoch 9/40
+2025-05-25 12:30:38,120 - INFO -   Batch 20/62: Avg Batch Loss: 0.241859  [  2560/  8040]
+2025-05-25 12:30:41,563 - INFO -   Batch 40/62: Avg Batch Loss: 0.233445  [  5120/  8040]
+2025-05-25 12:30:44,989 - INFO -   Batch 60/62: Avg Batch Loss: 0.224025  [  7680/  8040]
+2025-05-25 12:30:45,482 - INFO - Epoch 9 - Average Training Loss: 0.237120
+2025-05-25 12:30:47,336 - INFO - Epoch 9 - Average Validation Loss: 0.208702
+2025-05-25 12:30:47,336 - INFO - New best validation loss: 0.208702. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:30:47,347 - INFO - Epoch 10/40
+2025-05-25 12:30:50,994 - INFO -   Batch 20/62: Avg Batch Loss: 0.214925  [  2560/  8040]
+2025-05-25 12:30:54,402 - INFO -   Batch 40/62: Avg Batch Loss: 0.207469  [  5120/  8040]
+2025-05-25 12:30:57,879 - INFO -   Batch 60/62: Avg Batch Loss: 0.199491  [  7680/  8040]
+2025-05-25 12:30:58,443 - INFO - Epoch 10 - Average Training Loss: 0.210733
+2025-05-25 12:31:00,172 - INFO - Epoch 10 - Average Validation Loss: 0.196310
+2025-05-25 12:31:00,172 - INFO - New best validation loss: 0.196310. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:31:00,185 - INFO - Epoch 11/40
+2025-05-25 12:31:03,584 - INFO -   Batch 20/62: Avg Batch Loss: 0.192003  [  2560/  8040]
+2025-05-25 12:31:06,963 - INFO -   Batch 40/62: Avg Batch Loss: 0.185814  [  5120/  8040]
+2025-05-25 12:31:10,410 - INFO -   Batch 60/62: Avg Batch Loss: 0.179313  [  7680/  8040]
+2025-05-25 12:31:10,929 - INFO - Epoch 11 - Average Training Loss: 0.188208
+2025-05-25 12:31:12,779 - INFO - Epoch 11 - Average Validation Loss: 0.176309
+2025-05-25 12:31:12,779 - INFO - New best validation loss: 0.176309. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:31:12,790 - INFO - Epoch 12/40
+2025-05-25 12:31:16,198 - INFO -   Batch 20/62: Avg Batch Loss: 0.172041  [  2560/  8040]
+2025-05-25 12:31:19,557 - INFO -   Batch 40/62: Avg Batch Loss: 0.166070  [  5120/  8040]
+2025-05-25 12:31:23,005 - INFO -   Batch 60/62: Avg Batch Loss: 0.159979  [  7680/  8040]
+2025-05-25 12:31:23,499 - INFO - Epoch 12 - Average Training Loss: 0.168723
+2025-05-25 12:31:25,295 - INFO - Epoch 12 - Average Validation Loss: 0.154786
+2025-05-25 12:31:25,295 - INFO - New best validation loss: 0.154786. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:31:25,306 - INFO - Epoch 13/40
+2025-05-25 12:31:28,832 - INFO -   Batch 20/62: Avg Batch Loss: 0.154738  [  2560/  8040]
+2025-05-25 12:31:32,119 - INFO -   Batch 40/62: Avg Batch Loss: 0.149088  [  5120/  8040]
+2025-05-25 12:31:35,548 - INFO -   Batch 60/62: Avg Batch Loss: 0.144124  [  7680/  8040]
+2025-05-25 12:31:36,033 - INFO - Epoch 13 - Average Training Loss: 0.151913
+2025-05-25 12:31:37,810 - INFO - Epoch 13 - Average Validation Loss: 0.141930
+2025-05-25 12:31:37,810 - INFO - New best validation loss: 0.141930. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:31:37,821 - INFO - Epoch 14/40
+2025-05-25 12:31:41,162 - INFO -   Batch 20/62: Avg Batch Loss: 0.139086  [  2560/  8040]
+2025-05-25 12:31:44,495 - INFO -   Batch 40/62: Avg Batch Loss: 0.134610  [  5120/  8040]
+2025-05-25 12:31:47,948 - INFO -   Batch 60/62: Avg Batch Loss: 0.130282  [  7680/  8040]
+2025-05-25 12:31:48,434 - INFO - Epoch 14 - Average Training Loss: 0.137379
+2025-05-25 12:31:50,252 - INFO - Epoch 14 - Average Validation Loss: 0.130105
+2025-05-25 12:31:50,252 - INFO - New best validation loss: 0.130105. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:31:50,263 - INFO - Epoch 15/40
+2025-05-25 12:31:53,891 - INFO -   Batch 20/62: Avg Batch Loss: 0.127017  [  2560/  8040]
+2025-05-25 12:31:57,333 - INFO -   Batch 40/62: Avg Batch Loss: 0.122133  [  5120/  8040]
+2025-05-25 12:32:00,608 - INFO -   Batch 60/62: Avg Batch Loss: 0.120598  [  7680/  8040]
+2025-05-25 12:32:01,091 - INFO - Epoch 15 - Average Training Loss: 0.124716
+2025-05-25 12:32:02,970 - INFO - Epoch 15 - Average Validation Loss: 0.117193
+2025-05-25 12:32:02,970 - INFO - New best validation loss: 0.117193. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:32:02,981 - INFO - Epoch 16/40
+2025-05-25 12:32:06,425 - INFO -   Batch 20/62: Avg Batch Loss: 0.116615  [  2560/  8040]
+2025-05-25 12:32:09,885 - INFO -   Batch 40/62: Avg Batch Loss: 0.112195  [  5120/  8040]
+2025-05-25 12:32:13,270 - INFO -   Batch 60/62: Avg Batch Loss: 0.109486  [  7680/  8040]
+2025-05-25 12:32:13,789 - INFO - Epoch 16 - Average Training Loss: 0.113826
+2025-05-25 12:32:15,679 - INFO - Epoch 16 - Average Validation Loss: 0.105250
+2025-05-25 12:32:15,680 - INFO - New best validation loss: 0.105250. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:32:15,690 - INFO - Epoch 17/40
+2025-05-25 12:32:19,097 - INFO -   Batch 20/62: Avg Batch Loss: 0.105987  [  2560/  8040]
+2025-05-25 12:32:22,552 - INFO -   Batch 40/62: Avg Batch Loss: 0.104857  [  5120/  8040]
+2025-05-25 12:32:25,798 - INFO -   Batch 60/62: Avg Batch Loss: 0.100199  [  7680/  8040]
+2025-05-25 12:32:26,257 - INFO - Epoch 17 - Average Training Loss: 0.104854
+2025-05-25 12:32:28,145 - INFO - Epoch 17 - Average Validation Loss: 0.098467
+2025-05-25 12:32:28,145 - INFO - New best validation loss: 0.098467. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:32:28,156 - INFO - Epoch 18/40
+2025-05-25 12:32:31,561 - INFO -   Batch 20/62: Avg Batch Loss: 0.098003  [  2560/  8040]
+2025-05-25 12:32:35,027 - INFO -   Batch 40/62: Avg Batch Loss: 0.095701  [  5120/  8040]
+2025-05-25 12:32:38,296 - INFO -   Batch 60/62: Avg Batch Loss: 0.092452  [  7680/  8040]
+2025-05-25 12:32:38,769 - INFO - Epoch 18 - Average Training Loss: 0.096547
+2025-05-25 12:32:40,607 - INFO - Epoch 18 - Average Validation Loss: 0.092473
+2025-05-25 12:32:40,607 - INFO - New best validation loss: 0.092473. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:32:40,618 - INFO - Epoch 19/40
+2025-05-25 12:32:44,021 - INFO -   Batch 20/62: Avg Batch Loss: 0.091811  [  2560/  8040]
+2025-05-25 12:32:47,341 - INFO -   Batch 40/62: Avg Batch Loss: 0.088316  [  5120/  8040]
+2025-05-25 12:32:50,727 - INFO -   Batch 60/62: Avg Batch Loss: 0.085625  [  7680/  8040]
+2025-05-25 12:32:51,240 - INFO - Epoch 19 - Average Training Loss: 0.089596
+2025-05-25 12:32:53,055 - INFO - Epoch 19 - Average Validation Loss: 0.086057
+2025-05-25 12:32:53,055 - INFO - New best validation loss: 0.086057. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:32:53,066 - INFO - Epoch 20/40
+2025-05-25 12:32:56,451 - INFO -   Batch 20/62: Avg Batch Loss: 0.083526  [  2560/  8040]
+2025-05-25 12:32:59,875 - INFO -   Batch 40/62: Avg Batch Loss: 0.082725  [  5120/  8040]
+2025-05-25 12:33:03,167 - INFO -   Batch 60/62: Avg Batch Loss: 0.081101  [  7680/  8040]
+2025-05-25 12:33:03,626 - INFO - Epoch 20 - Average Training Loss: 0.083320
+2025-05-25 12:33:05,469 - INFO - Epoch 20 - Average Validation Loss: 0.080752
+2025-05-25 12:33:05,469 - INFO - New best validation loss: 0.080752. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:33:05,479 - INFO - Epoch 21/40
+2025-05-25 12:33:09,036 - INFO -   Batch 20/62: Avg Batch Loss: 0.079225  [  2560/  8040]
+2025-05-25 12:33:12,405 - INFO -   Batch 40/62: Avg Batch Loss: 0.077297  [  5120/  8040]
+2025-05-25 12:33:15,618 - INFO -   Batch 60/62: Avg Batch Loss: 0.077942  [  7680/  8040]
+2025-05-25 12:33:16,098 - INFO - Epoch 21 - Average Training Loss: 0.078691
+2025-05-25 12:33:17,974 - INFO - Epoch 21 - Average Validation Loss: 0.076258
+2025-05-25 12:33:17,974 - INFO - New best validation loss: 0.076258. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:33:17,985 - INFO - Epoch 22/40
+2025-05-25 12:33:21,531 - INFO -   Batch 20/62: Avg Batch Loss: 0.073358  [  2560/  8040]
+2025-05-25 12:33:24,873 - INFO -   Batch 40/62: Avg Batch Loss: 0.073283  [  5120/  8040]
+2025-05-25 12:33:28,146 - INFO -   Batch 60/62: Avg Batch Loss: 0.073901  [  7680/  8040]
+2025-05-25 12:33:28,634 - INFO - Epoch 22 - Average Training Loss: 0.073974
+2025-05-25 12:33:30,501 - INFO - Epoch 22 - Average Validation Loss: 0.072229
+2025-05-25 12:33:30,501 - INFO - New best validation loss: 0.072229. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:33:30,511 - INFO - Epoch 23/40
+2025-05-25 12:33:33,985 - INFO -   Batch 20/62: Avg Batch Loss: 0.070794  [  2560/  8040]
+2025-05-25 12:33:37,464 - INFO -   Batch 40/62: Avg Batch Loss: 0.069603  [  5120/  8040]
+2025-05-25 12:33:40,751 - INFO -   Batch 60/62: Avg Batch Loss: 0.068431  [  7680/  8040]
+2025-05-25 12:33:41,213 - INFO - Epoch 23 - Average Training Loss: 0.070100
+2025-05-25 12:33:43,073 - INFO - Epoch 23 - Average Validation Loss: 0.067695
+2025-05-25 12:33:43,073 - INFO - New best validation loss: 0.067695. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:33:43,084 - INFO - Epoch 24/40
+2025-05-25 12:33:46,581 - INFO -   Batch 20/62: Avg Batch Loss: 0.068101  [  2560/  8040]
+2025-05-25 12:33:49,912 - INFO -   Batch 40/62: Avg Batch Loss: 0.067513  [  5120/  8040]
+2025-05-25 12:33:53,165 - INFO -   Batch 60/62: Avg Batch Loss: 0.065577  [  7680/  8040]
+2025-05-25 12:33:53,655 - INFO - Epoch 24 - Average Training Loss: 0.066549
+2025-05-25 12:33:55,532 - INFO - Epoch 24 - Average Validation Loss: 0.064687
+2025-05-25 12:33:55,532 - INFO - New best validation loss: 0.064687. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:33:55,543 - INFO - Epoch 25/40
+2025-05-25 12:33:58,944 - INFO -   Batch 20/62: Avg Batch Loss: 0.064050  [  2560/  8040]
+2025-05-25 12:34:02,178 - INFO -   Batch 40/62: Avg Batch Loss: 0.062244  [  5120/  8040]
+2025-05-25 12:34:05,455 - INFO -   Batch 60/62: Avg Batch Loss: 0.062366  [  7680/  8040]
+2025-05-25 12:34:05,916 - INFO - Epoch 25 - Average Training Loss: 0.063789
+2025-05-25 12:34:07,755 - INFO - Epoch 25 - Average Validation Loss: 0.064469
+2025-05-25 12:34:07,755 - INFO - New best validation loss: 0.064469. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:34:07,766 - INFO - Epoch 26/40
+2025-05-25 12:34:11,152 - INFO -   Batch 20/62: Avg Batch Loss: 0.060739  [  2560/  8040]
+2025-05-25 12:34:14,555 - INFO -   Batch 40/62: Avg Batch Loss: 0.061447  [  5120/  8040]
+2025-05-25 12:34:17,790 - INFO -   Batch 60/62: Avg Batch Loss: 0.059094  [  7680/  8040]
+2025-05-25 12:34:18,335 - INFO - Epoch 26 - Average Training Loss: 0.061133
+2025-05-25 12:34:20,229 - INFO - Epoch 26 - Average Validation Loss: 0.059452
+2025-05-25 12:34:20,229 - INFO - New best validation loss: 0.059452. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:34:20,240 - INFO - Epoch 27/40
+2025-05-25 12:34:23,625 - INFO -   Batch 20/62: Avg Batch Loss: 0.057811  [  2560/  8040]
+2025-05-25 12:34:26,927 - INFO -   Batch 40/62: Avg Batch Loss: 0.058462  [  5120/  8040]
+2025-05-25 12:34:30,163 - INFO -   Batch 60/62: Avg Batch Loss: 0.058101  [  7680/  8040]
+2025-05-25 12:34:30,653 - INFO - Epoch 27 - Average Training Loss: 0.058992
+2025-05-25 12:34:32,482 - INFO - Epoch 27 - Average Validation Loss: 0.057701
+2025-05-25 12:34:32,482 - INFO - New best validation loss: 0.057701. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:34:32,492 - INFO - Epoch 28/40
+2025-05-25 12:34:35,867 - INFO -   Batch 20/62: Avg Batch Loss: 0.059067  [  2560/  8040]
+2025-05-25 12:34:39,187 - INFO -   Batch 40/62: Avg Batch Loss: 0.054586  [  5120/  8040]
+2025-05-25 12:34:42,441 - INFO -   Batch 60/62: Avg Batch Loss: 0.055609  [  7680/  8040]
+2025-05-25 12:34:42,966 - INFO - Epoch 28 - Average Training Loss: 0.056878
+2025-05-25 12:34:44,788 - INFO - Epoch 28 - Average Validation Loss: 0.055832
+2025-05-25 12:34:44,788 - INFO - New best validation loss: 0.055832. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:34:44,799 - INFO - Epoch 29/40
+2025-05-25 12:34:48,184 - INFO -   Batch 20/62: Avg Batch Loss: 0.056291  [  2560/  8040]
+2025-05-25 12:34:51,461 - INFO -   Batch 40/62: Avg Batch Loss: 0.053521  [  5120/  8040]
+2025-05-25 12:34:54,615 - INFO -   Batch 60/62: Avg Batch Loss: 0.053345  [  7680/  8040]
+2025-05-25 12:34:55,132 - INFO - Epoch 29 - Average Training Loss: 0.055038
+2025-05-25 12:34:57,058 - INFO - Epoch 29 - Average Validation Loss: 0.053630
+2025-05-25 12:34:57,058 - INFO - New best validation loss: 0.053630. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:34:57,069 - INFO - Epoch 30/40
+2025-05-25 12:35:00,419 - INFO -   Batch 20/62: Avg Batch Loss: 0.053986  [  2560/  8040]
+2025-05-25 12:35:03,811 - INFO -   Batch 40/62: Avg Batch Loss: 0.054111  [  5120/  8040]
+2025-05-25 12:35:07,053 - INFO -   Batch 60/62: Avg Batch Loss: 0.052765  [  7680/  8040]
+2025-05-25 12:35:07,659 - INFO - Epoch 30 - Average Training Loss: 0.053294
+2025-05-25 12:35:09,472 - INFO - Epoch 30 - Average Validation Loss: 0.051587
+2025-05-25 12:35:09,472 - INFO - New best validation loss: 0.051587. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:35:09,483 - INFO - Epoch 31/40
+2025-05-25 12:35:12,905 - INFO -   Batch 20/62: Avg Batch Loss: 0.051144  [  2560/  8040]
+2025-05-25 12:35:16,122 - INFO -   Batch 40/62: Avg Batch Loss: 0.053094  [  5120/  8040]
+2025-05-25 12:35:19,299 - INFO -   Batch 60/62: Avg Batch Loss: 0.051178  [  7680/  8040]
+2025-05-25 12:35:19,825 - INFO - Epoch 31 - Average Training Loss: 0.051952
+2025-05-25 12:35:21,759 - INFO - Epoch 31 - Average Validation Loss: 0.050425
+2025-05-25 12:35:21,759 - INFO - New best validation loss: 0.050425. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:35:21,770 - INFO - Epoch 32/40
+2025-05-25 12:35:25,126 - INFO -   Batch 20/62: Avg Batch Loss: 0.050683  [  2560/  8040]
+2025-05-25 12:35:28,491 - INFO -   Batch 40/62: Avg Batch Loss: 0.048714  [  5120/  8040]
+2025-05-25 12:35:31,689 - INFO -   Batch 60/62: Avg Batch Loss: 0.053037  [  7680/  8040]
+2025-05-25 12:35:32,218 - INFO - Epoch 32 - Average Training Loss: 0.050222
+2025-05-25 12:35:34,110 - INFO - Epoch 32 - Average Validation Loss: 0.049404
+2025-05-25 12:35:34,110 - INFO - New best validation loss: 0.049404. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:35:34,121 - INFO - Epoch 33/40
+2025-05-25 12:35:37,587 - INFO -   Batch 20/62: Avg Batch Loss: 0.049001  [  2560/  8040]
+2025-05-25 12:35:40,869 - INFO -   Batch 40/62: Avg Batch Loss: 0.046396  [  5120/  8040]
+2025-05-25 12:35:45,775 - INFO -   Batch 60/62: Avg Batch Loss: 0.046499  [  7680/  8040]
+2025-05-25 12:35:46,366 - INFO - Epoch 33 - Average Training Loss: 0.048037
+2025-05-25 12:35:48,491 - INFO - Epoch 33 - Average Validation Loss: 0.047358
+2025-05-25 12:35:48,491 - INFO - New best validation loss: 0.047358. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:35:48,503 - INFO - Epoch 34/40
+2025-05-25 12:35:52,042 - INFO -   Batch 20/62: Avg Batch Loss: 0.044283  [  2560/  8040]
+2025-05-25 12:35:55,337 - INFO -   Batch 40/62: Avg Batch Loss: 0.044921  [  5120/  8040]
+2025-05-25 12:35:58,508 - INFO -   Batch 60/62: Avg Batch Loss: 0.043139  [  7680/  8040]
+2025-05-25 12:35:59,014 - INFO - Epoch 34 - Average Training Loss: 0.045015
+2025-05-25 12:36:00,859 - INFO - Epoch 34 - Average Validation Loss: 0.044030
+2025-05-25 12:36:00,859 - INFO - New best validation loss: 0.044030. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:36:00,870 - INFO - Epoch 35/40
+2025-05-25 12:36:04,347 - INFO -   Batch 20/62: Avg Batch Loss: 0.043639  [  2560/  8040]
+2025-05-25 12:36:07,673 - INFO -   Batch 40/62: Avg Batch Loss: 0.040901  [  5120/  8040]
+2025-05-25 12:36:10,886 - INFO -   Batch 60/62: Avg Batch Loss: 0.039052  [  7680/  8040]
+2025-05-25 12:36:11,474 - INFO - Epoch 35 - Average Training Loss: 0.042095
+2025-05-25 12:36:13,332 - INFO - Epoch 35 - Average Validation Loss: 0.041451
+2025-05-25 12:36:13,332 - INFO - New best validation loss: 0.041451. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:36:13,343 - INFO - Epoch 36/40
+2025-05-25 12:36:16,739 - INFO -   Batch 20/62: Avg Batch Loss: 0.041636  [  2560/  8040]
+2025-05-25 12:36:20,097 - INFO -   Batch 40/62: Avg Batch Loss: 0.041104  [  5120/  8040]
+2025-05-25 12:36:23,284 - INFO -   Batch 60/62: Avg Batch Loss: 0.038989  [  7680/  8040]
+2025-05-25 12:36:23,814 - INFO - Epoch 36 - Average Training Loss: 0.040115
+2025-05-25 12:36:25,607 - INFO - Epoch 36 - Average Validation Loss: 0.039776
+2025-05-25 12:36:25,607 - INFO - New best validation loss: 0.039776. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:36:25,619 - INFO - Epoch 37/40
+2025-05-25 12:36:28,950 - INFO -   Batch 20/62: Avg Batch Loss: 0.039059  [  2560/  8040]
+2025-05-25 12:36:32,374 - INFO -   Batch 40/62: Avg Batch Loss: 0.038708  [  5120/  8040]
+2025-05-25 12:36:35,609 - INFO -   Batch 60/62: Avg Batch Loss: 0.039356  [  7680/  8040]
+2025-05-25 12:36:36,112 - INFO - Epoch 37 - Average Training Loss: 0.038885
+2025-05-25 12:36:37,954 - INFO - Epoch 37 - Average Validation Loss: 0.038706
+2025-05-25 12:36:37,954 - INFO - New best validation loss: 0.038706. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:36:37,966 - INFO - Epoch 38/40
+2025-05-25 12:36:41,281 - INFO -   Batch 20/62: Avg Batch Loss: 0.037777  [  2560/  8040]
+2025-05-25 12:36:44,533 - INFO -   Batch 40/62: Avg Batch Loss: 0.037578  [  5120/  8040]
+2025-05-25 12:36:47,630 - INFO -   Batch 60/62: Avg Batch Loss: 0.039054  [  7680/  8040]
+2025-05-25 12:36:48,162 - INFO - Epoch 38 - Average Training Loss: 0.038334
+2025-05-25 12:36:50,006 - INFO - Epoch 38 - Average Validation Loss: 0.038077
+2025-05-25 12:36:50,006 - INFO - New best validation loss: 0.038077. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:36:50,018 - INFO - Epoch 39/40
+2025-05-25 12:36:53,361 - INFO -   Batch 20/62: Avg Batch Loss: 0.037367  [  2560/  8040]
+2025-05-25 12:36:56,636 - INFO -   Batch 40/62: Avg Batch Loss: 0.037142  [  5120/  8040]
+2025-05-25 12:36:59,847 - INFO -   Batch 60/62: Avg Batch Loss: 0.034627  [  7680/  8040]
+2025-05-25 12:37:00,363 - INFO - Epoch 39 - Average Training Loss: 0.037617
+2025-05-25 12:37:02,158 - INFO - Epoch 39 - Average Validation Loss: 0.036726
+2025-05-25 12:37:02,159 - INFO - New best validation loss: 0.036726. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:37:02,169 - INFO - Epoch 40/40
+2025-05-25 12:37:05,464 - INFO -   Batch 20/62: Avg Batch Loss: 0.035662  [  2560/  8040]
+2025-05-25 12:37:08,772 - INFO -   Batch 40/62: Avg Batch Loss: 0.036167  [  5120/  8040]
+2025-05-25 12:37:11,916 - INFO -   Batch 60/62: Avg Batch Loss: 0.037321  [  7680/  8040]
+2025-05-25 12:37:12,461 - INFO - Epoch 40 - Average Training Loss: 0.036568
+2025-05-25 12:37:14,206 - INFO - Epoch 40 - Average Validation Loss: 0.036317
+2025-05-25 12:37:14,207 - INFO - New best validation loss: 0.036317. Saving model to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:37:14,217 - INFO - Training complete. Best model (val_loss: 0.036317) saved to tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:37:18,312 - INFO - Running evaluation with arguments: Namespace(model_path='tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth', dataset_name='Iquique', force_download_data=False, context_window_samples_before=3000, context_window_length=6000, model_input_samples=3001, sigma=20.0, batch_size=256, detection_threshold=0.3, skip_noise_metrics=False, num_workers=4, output_dir='tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/evaluation', num_plot_examples=3)
+2025-05-25 12:37:20,175 - INFO - Successfully loaded model from: tuning_runs/phasenet_Iquique/lr5e-4_s20_e40/phasenet_best_lr5e-4_s20_e40.pth
+2025-05-25 12:37:20,175 - INFO - Loading TEST set for dataset: Iquique
+2025-05-25 12:37:20,175 | seisbench | WARNING | Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-25 12:37:20,175 - WARNING - Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-25 12:37:20,224 | seisbench | WARNING | Output component order not specified, defaulting to 'ZNE'.
+2025-05-25 12:37:20,224 - WARNING - Output component order not specified, defaulting to 'ZNE'.
+2025-05-25 12:37:20,244 - INFO - Test set size (using default split): 4020
+Traceback (most recent call last):
+  File "/home/skataoka26/ann_final/evaluate.py", line 279, in <module>
+    main(args)
+  File "/home/skataoka26/ann_final/evaluate.py", line 96, in main
+    sbg.FixedWindow(
+TypeError: __init__() got an unexpected keyword argument 'low'

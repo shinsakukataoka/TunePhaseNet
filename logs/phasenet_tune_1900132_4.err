@@ -1,0 +1,10 @@
+2025-05-26 01:04:17,690 - INFO - Running evaluation with arguments: Namespace(model_path='tuning_runs/phasenet_Iquique/lr1e-4_s20_e40/phasenet_best_lr1e-4_s20_e40.pth', dataset_name='Iquique', force_download_data=False, context_window_samples_before=3000, context_window_length=6000, model_input_samples=3001, sigma=20.0, batch_size=256, detection_threshold=0.3, skip_noise_metrics=False, num_workers=4, output_dir='tuning_runs/phasenet_Iquique/lr1e-4_s20_e40/evaluation', num_plot_examples=3)
+2025-05-26 01:04:17,874 - INFO - Successfully loaded model from: tuning_runs/phasenet_Iquique/lr1e-4_s20_e40/phasenet_best_lr1e-4_s20_e40.pth
+2025-05-26 01:04:17,875 - INFO - Loading TEST set for dataset: Iquique
+2025-05-26 01:04:17,875 | seisbench | WARNING | Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-26 01:04:17,875 - WARNING - Check available storage and memory before downloading and general use of Iquique dataset. Dataset size: waveforms.hdf5 ~5Gb, metadata.csv ~2.6Mb
+2025-05-26 01:04:17,925 | seisbench | WARNING | Output component order not specified, defaulting to 'ZNE'.
+2025-05-26 01:04:17,925 - WARNING - Output component order not specified, defaulting to 'ZNE'.
+2025-05-26 01:04:17,944 - INFO - Test set size (using default split): 4020
+2025-05-26 01:04:17,945 - INFO - Running evaluation on the test set...
+Evaluating Test Set:   0%|          | 0/16 [00:00<?, ?it/s]slurmstepd: error: *** JOB 1900137 ON dgx001 CANCELLED AT 2025-05-26T01:04:18 ***
